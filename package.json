@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "nodemon": "^3.1.7",
+    "properties-reader": "^2.3.0",
+    "save": "^2.9.0"
+  },
+  "name": "vuefinal",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start2" :"nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Errolee",
+  "license": "ISC",
+  "description": ""
+}
