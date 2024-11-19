@@ -1,77 +1,92 @@
-var express = require("express");
-var express = require("path");
-
-let app = express();
+const express = require("express");
 const cors = require("cors");
-app.use(cors());
+const path = require("path");
+const PropertiesReader = require("properties-reader");
+const { MongoClient, ServerApiVersion } = require("mongodb");
+
+// Initialize Express app
+const app = express();
+app.use(cors()); // Restrict CORS for production
 app.use(express.json());
-app.set('json spaces', 3);
-const path = require('path');
-let PropertiesReader = require("properties-reader");
-// Load properties from the file
-let propertiesPath = path.resolve(__dirname, "./db.properties");
-let properties = PropertiesReader(propertiesPath);
+app.set("json spaces", 3);
 
-// Extract values from the properties file
-const dbPrefix = properties.get('db.prefix');
-const dbHost = properties.get('db.host');
-const dbName = properties.get('db.name');
-const dbUser = properties.get('db.user');
-const dbPassword = properties.get('db.password');
-const dbParams = properties.get('db.params');
+// Load properties
+const propertiesPath = path.resolve(__dirname, "./db.properties");
+const properties = PropertiesReader(propertiesPath);
 
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-// MongoDB connection URL
-const uri = `${dbPrefix}${dbUser}:${dbPassword}${dbHost}${dbParams}`;
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+// Extract DB config
+const dbPrefix = properties.get("db.prefix");
+const dbHost = properties.get("db.host");
+const dbName = properties.get("db.name");
+const dbUser = properties.get("db.user");
+const dbPassword = properties.get("db.password");
+const dbParams = properties.get("db.params");
+
+// MongoDB URI and Client
+const uri = `${dbPrefix}${dbUser}:${encodeURIComponent(dbPassword)}${dbHost}${dbParams}`;
 const client = new MongoClient(uri, { serverApi: ServerApiVersion.v1 });
 
-let db1;//declare variable
+let db1; // Declare global variable for DB
 
+// Connect to MongoDB
 async function connectDB() {
   try {
-    client.connect();
-    console.log('Connected to MongoDB');
-    db1 = client.db('App'); // the name of the collection being given 
+    await client.connect();
+    console.log("Connected to MongoDB");
+    db1 = client.db(dbName); // Set database reference
   } catch (err) {
-    console.error('MongoDB connection error:', err);
+    console.error("MongoDB connection error:", err);
+    process.exit(1); // Exit if DB connection fails
   }
 }
 
-connectDB(); //call the connectDB function to connect to MongoDB database
+connectDB();
 
-//Optional if you want the get the collection name from the Fetch API in test3.html then
-app.param('collectionName', async function(req, res, next, collectionName) { 
-    req.collection = db1.collection(collectionName);
-    /*Check the collection name for debugging if error */
-    console.log('Middleware set collection:', req.collection.collectionName);
-    next();
-});
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Ensure this route is defined after the middleware app.param
-// get all data from our collection in Mongodb
-app.get('/lessons', async function(req, res, next) {
+// Middleware to load collection dynamically
+app.param("collectionName", (req, res, next, collectionName) => {
   try {
-    const lessonsCollection = db1.collection('lessons'); // Connect to the 'lessons' collection
-    const lessons = await lessonsCollection.find({}).toArray(); // Retrieve all lessons
-    console.log('Retrieved lessons:', lessons);
-    res.json(lessons); // Send lessons as JSON response
+    req.collection = db1.collection(collectionName);
+    console.log("Middleware set collection:", req.collection.collectionName);
+    next();
   } catch (err) {
-    console.error('Error fetching lessons:', err.message);
+    console.error("Invalid collection:", err.message);
     next(err);
   }
 });
 
+// Serve static file
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
+
+// Route to fetch lessons
+app.get("/lessons", async (req, res, next) => {
+  try {
+    const lessons = await db1.collection("Lessons").find({}).toArray();
+    console.log("Retrieved lessons:", lessons);
+    res.json(lessons);
+  } catch (err) {
+    console.error("Error fetching lessons:", err.message);
+    next(err);
+  }
+});
+
+// Global Error Handler
 app.use((err, req, res, next) => {
-  console.error('Global error handler:', err);
-  res.status(500).json({ error: 'An error occurred' });
+  console.error("Global error handler:", err);
+  res.status(500).json({ error: "An internal server error occurred" });
+});
+
+// Graceful shutdown
+process.on("SIGINT", async () => {
+  console.log("Shutting down gracefully...");
+  await client.close();
+  console.log("MongoDB connection closed");
+  process.exit(0);
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

@@ -13,8 +13,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "start2" :"nodemon index.js"
+    "start": "nodemon index.js",
+    "start2": "nodemon index.js"
   },
   "keywords": [],
   "author": "Errolee",
