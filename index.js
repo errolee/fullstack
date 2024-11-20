@@ -109,14 +109,28 @@ app.get('/orders', async (req, res, next) => {
 });
 
 // Posting a new order into the database
-app.post('/order', async (req, res, next) => {
+app.post('/order', async (req, res) => {
   try {
-    const result = await db1.collection('Orders').insertOne(req.body);
-    res.json(result);
-    logger.info('Posted a new order');
+      const orderData = req.body;
+
+      const lessons = orderData.lessons.map(lesson => ({
+          lessonID: lesson.lessonID,
+          spaces: lesson.spaces
+      }));
+
+      const order = {
+          name: orderData.name,
+          phone: orderData.phone,
+          lessons: lessons,
+          totalPrice: orderData.totalPrice,
+      };
+
+      const result = await db1.collection('Orders').insertOne(order);
+
+      res.json({ insertedId: result.insertedId });
   } catch (error) {
-    logger.error('Failed to create order:', error.message);
-    next(error);
+      console.error('Error creating order:', error);
+      res.status(500).json({ error: "Failed to create order" });
   }
 });
 
@@ -142,25 +156,33 @@ app.put('/order/:orderNo', async (req, res, next) => {
 });
 
 // Update lesson program by id
-app.put('/programs/:id', async (req, res, next) => {
+// Update a lesson by id (using ObjectId for _id)
+app.put('/lessons/:id', async (req, res, next) => {
   try {
-    const { id } = req.params;
+    const { id } = req.params;  // Get the lesson's id from the URL
+    const updateData = req.body;  // The data sent in the request body (e.g., availability)
+
+    // Ensure that the ID is valid and use it for MongoDB's _id field
+    const lessonObjectId = new ObjectId(id);
+
+    // Update the lesson document
     const result = await db1.collection('Lessons').updateOne(
-      { _id: new ObjectId(id) }, // Use ObjectId for MongoDB _id fields
-      { $set: req.body }
+      { _id: lessonObjectId },  // Find the lesson by ObjectId
+      { $set: updateData }       // Set the updated data
     );
 
     if (result.matchedCount === 0) {
-      return res.status(404).json({ error: 'Program not found' });
+      return res.status(404).json({ error: 'Lesson not found' });
     }
 
-    logger.info("Updated a program successfully");
-    res.json(result);
+    logger.info("Updated the lesson successfully");
+    res.json(result);  // Return the result of the update
   } catch (error) {
-    logger.error("Failed to update program:", error.message);
-    next(error);
+    logger.error("Failed to update lesson:", error.message);
+    next(error);  // Pass the error to the next middleware
   }
 });
+
 
 // Global Error Handler
 app.use((err, req, res, next) => {
