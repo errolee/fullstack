@@ -78,9 +78,9 @@ app.param("collectionName", (req, res, next, collectionName) => {
     next(err);
   }
 });
-app.get("/",(req,res) =>{
+/*app.get("/",(req,res) =>{
   res.send("welcome to our homepage");
-});
+});*/
 
 // Static file serving
 const imagePath = path.resolve(process.cwd(), 'images');
@@ -140,7 +140,7 @@ app.post('/order', async (req, res) => {
 });
 
 // Update order by orderNo
-app.put('/order/:orderNo', async (req, res, next) => {
+/*app.put('/order/:orderNo', async (req, res, next) => {
   try {
     const { orderNo } = req.params;
     const result = await db1.collection('Orders').updateOne(
@@ -158,7 +158,7 @@ app.put('/order/:orderNo', async (req, res, next) => {
     logger.error("Failed to update order:", error.message);
     next(error);
   }
-});
+});*/
 
 // Update lesson program by id
 // Update a lesson by id (using ObjectId for _id)

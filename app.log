@@ -1464,3 +1464,54 @@
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:19:04.826Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:19:05.132Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:19:07.779Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T08:00:09.491Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T08:00:11.600Z"}
+{"level":"info","message":"PUT /order/673b5857b07730bd14ea03ec - 2024-11-21T08:00:11.693Z","timestamp":"2024-11-21T08:00:11.693Z"}
+{"level":"info","message":"PUT /order/673b5857b07730bd14ea03ec - 2024-11-21T08:01:07.138Z","timestamp":"2024-11-21T08:01:07.138Z"}
+{"level":"info","message":"PUT /order/673b5857b07730bd14ea03ec - 2024-11-21T08:02:16.207Z","timestamp":"2024-11-21T08:02:16.207Z"}
+{"level":"info","message":"GET /Lessons - 2024-11-21T08:12:43.074Z","timestamp":"2024-11-21T08:12:43.078Z"}
+{"0":{"_id":"673b5857b07730bd14ea03ea","availability":3,"icon":"fas fa-brain","location":"Quatre-Bornes","price":1200,"subject":"Biology"},"1":{"_id":"673b5857b07730bd14ea03ec","availability":5,"icon":"fas fa-book-reader","location":"Belle-Rose","price":500,"subject":"History"},"2":{"_id":"673b5857b07730bd14ea03e3","availability":5,"icon":"fas fa-calculator","location":"Port-louis","price":1000,"subject":"Maths"},"3":{"_id":"673b5857b07730bd14ea03e5","availability":5,"icon":"fas fa-book-open","location":"Rose-Hill","price":2000,"subject":"Spanish"},"4":{"_id":"673b5857b07730bd14ea03e6","availability":5,"icon":"fas fa-book-open","location":"Quatre-Bornes","price":2200,"subject":"English"},"5":{"_id":"673b5857b07730bd14ea03e7","availability":5,"icon":"fas fa-book-open","location":"Curepipe","price":2300,"subject":"French"},"6":{"_id":"673b5857b07730bd14ea03e9","availability":5,"icon":"fas fa-globe","location":"Rose-Hill","price":1500,"subject":"Geography"},"7":{"_id":"673b5857b07730bd14ea03e4","availability":5,"icon":"fas fa-rocket","location":"Albion","price":1800,"subject":"Physics"},"8":{"_id":"673b5857b07730bd14ea03e8","availability":5,"icon":"fas fa-book-open","location":"Port-louis","price":2100,"subject":"Dutch"},"9":{"_id":"673b5857b07730bd14ea03eb","availability":5,"icon":"fas fa-flask","location":"Vacoas","price":700,"subject":"Chemistry"},"level":"info","message":"Retrieved lessons:","timestamp":"2024-11-21T08:12:43.170Z"}
+{"level":"info","message":"GET /orders - 2024-11-21T08:15:12.984Z","timestamp":"2024-11-21T08:15:12.987Z"}
+{"level":"info","message":"Displaying data in the Orders Collection","timestamp":"2024-11-21T08:15:13.076Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T08:17:21.794Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T08:17:23.570Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T08:18:01.500Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T08:18:03.500Z"}
+{"level":"info","message":"GET / - 2024-11-21T08:37:03.666Z","timestamp":"2024-11-21T08:37:03.670Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T10:17:15.836Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T10:17:17.954Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T10:22:31.115Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T10:22:33.087Z"}
+{"level":"info","message":"GET / - 2024-11-21T10:22:46.152Z","timestamp":"2024-11-21T10:22:46.152Z"}
+{"level":"info","message":"GET /favicon.ico - 2024-11-21T10:22:50.373Z","timestamp":"2024-11-21T10:22:50.373Z"}
+{"level":"info","message":"GET /orders - 2024-11-21T10:49:15.158Z","timestamp":"2024-11-21T10:49:15.177Z"}
+{"level":"info","message":"Displaying data in the Orders Collection","timestamp":"2024-11-21T10:49:15.289Z"}
+{"body":"{\n  \"name\": \"John Doe\",\n  \"phone\": \"1234567890\",\n  \"lessons\": [\n    { \"lessonID\": \"673b5857b07730bd14ea03e3\", \"spaces\": 2 },\n  ],\n  \"totalPrice\": 300\n}\n","expose":true,"level":"error","message":"Global error handler: Unexpected token ']', ...\"\": 2 },\n  ],\n  \"tota\"... is not valid JSON","stack":"SyntaxError: Unexpected token ']', ...\"\": 2 },\n  ],\n  \"tota\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at parse (/Users/logeenagerie/fullstack-backend/node_modules/body-parser/lib/types/json.js:92:19)\n    at /Users/logeenagerie/fullstack-backend/node_modules/body-parser/lib/read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (/Users/logeenagerie/fullstack-backend/node_modules/raw-body/index.js:238:16)\n    at done (/Users/logeenagerie/fullstack-backend/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/Users/logeenagerie/fullstack-backend/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:519:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","status":400,"statusCode":400,"timestamp":"2024-11-21T10:52:38.986Z","type":"entity.parse.failed"}
+{"level":"info","message":"POST /order - 2024-11-21T10:52:54.939Z","timestamp":"2024-11-21T10:52:54.939Z"}
+{"level":"info","message":"PUT /order/673b5857b07730bd14ea03ea - 2024-11-21T11:32:37.966Z","timestamp":"2024-11-21T11:32:37.968Z"}
+{"level":"info","message":"PUT /order/673ce06ee517893ca5ce442c - 2024-11-21T11:34:52.100Z","timestamp":"2024-11-21T11:34:52.102Z"}
+{"level":"info","message":"PUT /order/673ce06ee517893ca5ce442c - 2024-11-21T11:35:15.234Z","timestamp":"2024-11-21T11:35:15.234Z"}
+{"level":"info","message":"PUT /Orders/673ce06ee517893ca5ce442c - 2024-11-21T11:35:29.628Z","timestamp":"2024-11-21T11:35:29.628Z"}
+{"level":"info","message":"PUT /orders/673ce06ee517893ca5ce442c - 2024-11-21T11:35:35.893Z","timestamp":"2024-11-21T11:35:35.893Z"}
+{"level":"info","message":"PUT /order/673ce06ee517893ca5ce442c - 2024-11-21T11:35:38.969Z","timestamp":"2024-11-21T11:35:38.970Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T11:38:49.770Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T11:38:51.426Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T11:38:52.462Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T11:39:02.901Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T11:39:04.259Z"}
+{"level":"info","message":"PUT /order/673ce06ee517893ca5ce442c - 2024-11-21T11:39:12.896Z","timestamp":"2024-11-21T11:39:12.896Z"}
+{"level":"info","message":"PUT /id/673ce06ee517893ca5ce442c - 2024-11-21T11:39:27.357Z","timestamp":"2024-11-21T11:39:27.357Z"}
+{"level":"info","message":"PUT /order/id/673ce06ee517893ca5ce442c - 2024-11-21T11:40:13.150Z","timestamp":"2024-11-21T11:40:13.150Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T11:41:26.686Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T11:41:28.008Z"}
+{"level":"info","message":"PUT /order/id/673ce06ee517893ca5ce442c - 2024-11-21T11:41:45.261Z","timestamp":"2024-11-21T11:41:45.262Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T11:41:53.318Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T11:41:54.768Z"}
+{"level":"info","message":"PUT /lessons/673b5857b07730bd14ea03ea - 2024-11-21T11:44:53.254Z","timestamp":"2024-11-21T11:44:53.254Z"}
+{"level":"info","message":"Updated the lesson successfully","timestamp":"2024-11-21T11:44:53.339Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T12:06:55.328Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T12:06:57.074Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T12:07:24.701Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T12:07:26.098Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T12:07:27.513Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T12:07:28.802Z"}
