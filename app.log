@@ -1414,3 +1414,53 @@
 {"0":{"_id":"673b5857b07730bd14ea03ea","availability":15,"image":"maths.png","location":"Quatre-Bornes","price":1200,"subject":"Biology"},"1":{"_id":"673b5857b07730bd14ea03ec","availability":3,"icon":"fas fa-book-reader","location":"Belle-Rose","price":500,"subject":"History"},"2":{"_id":"673b5857b07730bd14ea03e3","availability":5,"icon":"fas fa-calculator","location":"Port-louis","price":1000,"subject":"Maths"},"3":{"_id":"673b5857b07730bd14ea03e5","availability":5,"icon":"fas fa-book-open","location":"Rose-Hill","price":2000,"subject":"Spanish"},"4":{"_id":"673b5857b07730bd14ea03e6","availability":5,"icon":"fas fa-book-open","location":"Quatre-Bornes","price":2200,"subject":"English"},"5":{"_id":"673b5857b07730bd14ea03e7","availability":5,"icon":"fas fa-book-open","location":"Curepipe","price":2300,"subject":"French"},"6":{"_id":"673b5857b07730bd14ea03e9","availability":5,"icon":"fas fa-globe","location":"Rose-Hill","price":1500,"subject":"Geography"},"7":{"_id":"673b5857b07730bd14ea03e4","availability":5,"icon":"fas fa-rocket","location":"Albion","price":1800,"subject":"Physics"},"8":{"_id":"673b5857b07730bd14ea03e8","availability":5,"icon":"fas fa-book-open","location":"Port-louis","price":2100,"subject":"Dutch"},"9":{"_id":"673b5857b07730bd14ea03eb","availability":5,"icon":"fas fa-flask","location":"Vacoas","price":700,"subject":"Chemistry"},"level":"info","message":"Retrieved lessons:","timestamp":"2024-11-20T16:17:24.192Z"}
 {"level":"info","message":"GET /lessons - 2024-11-20T16:18:17.830Z","timestamp":"2024-11-20T16:18:17.831Z"}
 {"0":{"_id":"673b5857b07730bd14ea03ea","availability":15,"icon":"fas fa-brain","location":"Quatre-Bornes","price":1200,"subject":"Biology"},"1":{"_id":"673b5857b07730bd14ea03ec","availability":3,"icon":"fas fa-book-reader","location":"Belle-Rose","price":500,"subject":"History"},"2":{"_id":"673b5857b07730bd14ea03e3","availability":5,"icon":"fas fa-calculator","location":"Port-louis","price":1000,"subject":"Maths"},"3":{"_id":"673b5857b07730bd14ea03e5","availability":5,"icon":"fas fa-book-open","location":"Rose-Hill","price":2000,"subject":"Spanish"},"4":{"_id":"673b5857b07730bd14ea03e6","availability":5,"icon":"fas fa-book-open","location":"Quatre-Bornes","price":2200,"subject":"English"},"5":{"_id":"673b5857b07730bd14ea03e7","availability":5,"icon":"fas fa-book-open","location":"Curepipe","price":2300,"subject":"French"},"6":{"_id":"673b5857b07730bd14ea03e9","availability":5,"icon":"fas fa-globe","location":"Rose-Hill","price":1500,"subject":"Geography"},"7":{"_id":"673b5857b07730bd14ea03e4","availability":5,"icon":"fas fa-rocket","location":"Albion","price":1800,"subject":"Physics"},"8":{"_id":"673b5857b07730bd14ea03e8","availability":5,"icon":"fas fa-book-open","location":"Port-louis","price":2100,"subject":"Dutch"},"9":{"_id":"673b5857b07730bd14ea03eb","availability":5,"icon":"fas fa-flask","location":"Vacoas","price":700,"subject":"Chemistry"},"level":"info","message":"Retrieved lessons:","timestamp":"2024-11-20T16:18:17.900Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:07:17.565Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:07:18.973Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:07:37.019Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:07:37.749Z"}
+{"level":"info","message":"GET /Lessons - 2024-11-20T18:08:25.142Z","timestamp":"2024-11-20T18:08:25.145Z"}
+{"0":{"_id":"673b5857b07730bd14ea03ea","availability":15,"icon":"fas fa-brain","location":"Quatre-Bornes","price":1200,"subject":"Biology"},"1":{"_id":"673b5857b07730bd14ea03ec","availability":3,"icon":"fas fa-book-reader","location":"Belle-Rose","price":500,"subject":"History"},"2":{"_id":"673b5857b07730bd14ea03e3","availability":5,"icon":"fas fa-calculator","location":"Port-louis","price":1000,"subject":"Maths"},"3":{"_id":"673b5857b07730bd14ea03e5","availability":5,"icon":"fas fa-book-open","location":"Rose-Hill","price":2000,"subject":"Spanish"},"4":{"_id":"673b5857b07730bd14ea03e6","availability":5,"icon":"fas fa-book-open","location":"Quatre-Bornes","price":2200,"subject":"English"},"5":{"_id":"673b5857b07730bd14ea03e7","availability":5,"icon":"fas fa-book-open","location":"Curepipe","price":2300,"subject":"French"},"6":{"_id":"673b5857b07730bd14ea03e9","availability":5,"icon":"fas fa-globe","location":"Rose-Hill","price":1500,"subject":"Geography"},"7":{"_id":"673b5857b07730bd14ea03e4","availability":5,"icon":"fas fa-rocket","location":"Albion","price":1800,"subject":"Physics"},"8":{"_id":"673b5857b07730bd14ea03e8","availability":5,"icon":"fas fa-book-open","location":"Port-louis","price":2100,"subject":"Dutch"},"9":{"_id":"673b5857b07730bd14ea03eb","availability":5,"icon":"fas fa-flask","location":"Vacoas","price":700,"subject":"Chemistry"},"level":"info","message":"Retrieved lessons:","timestamp":"2024-11-20T18:08:25.238Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:30:52.763Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:31:43.820Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:31:44.517Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:31:50.415Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:31:51.137Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:32:10.241Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:32:10.965Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:32:51.792Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:32:52.494Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:33:01.413Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:33:02.507Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:33:08.086Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:33:09.032Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:33:09.238Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:33:09.932Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:33:18.157Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:33:18.840Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:33:32.495Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:33:33.176Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-20T18:33:37.645Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-20T18:33:38.296Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:12:03.224Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:12:04.675Z"}
+{"level":"info","message":"Server is running on port undefined","timestamp":"2024-11-21T07:13:41.600Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:13:43.839Z"}
+{"level":"info","message":"Server is running on port undefined","timestamp":"2024-11-21T07:13:44.581Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:13:47.966Z"}
+{"level":"info","message":"Server is running on port undefined","timestamp":"2024-11-21T07:13:48.570Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:14:35.295Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:14:36.953Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:14:37.280Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:14:39.084Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:16:36.073Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:16:37.770Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:16:39.171Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:18:28.078Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:18:31.189Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:18:35.372Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:18:49.520Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:18:51.342Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:19:02.350Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:19:04.826Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T07:19:05.132Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T07:19:07.779Z"}

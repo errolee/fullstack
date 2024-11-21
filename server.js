@@ -8,7 +8,9 @@ const winston = require("winston"); // Structured logging
 // Initialize Express app
 const app = express();
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://yourdomain.com' : '*'
+  origin: 'https://fullstack-backend-s1kh.onrender.com/', // Your GitHub Pages link
+  methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+  allowedHeaders: 'Content-Type' // Allowed headers
 })); // Restrict CORS for production
 app.use(express.json());
 app.set("json spaces", 3);
@@ -75,6 +77,9 @@ app.param("collectionName", (req, res, next, collectionName) => {
     logger.error("Invalid collection:", err.message);
     next(err);
   }
+});
+app.get("/",(req,res) =>{
+  res.send("welcome to our homepage");
 });
 
 // Static file serving
@@ -199,7 +204,7 @@ process.on("SIGINT", async () => {
 });
 
 // Start the server
-const PORT = 3000;
+const PORT = process.env.PORT  || 3000;
 app.listen(PORT, () => {
   logger.info(`Server is running on port ${PORT}`);
 });
