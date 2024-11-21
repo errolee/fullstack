@@ -8,8 +8,8 @@ const winston = require("winston"); // Structured logging
 // Initialize Express app
 const app = express();
 app.use(cors({
-  origin: 'https://fullstack-backend-s1kh.onrender.com/', // Your GitHub Pages link
-  methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+  origin: 'https://errolee.github.io', // Your GitHub Pages link
+  methods: 'GET,POST,PUT', // Allowed HTTP methods
   allowedHeaders: 'Content-Type' // Allowed headers
 })); // Restrict CORS for production
 app.use(express.json());
