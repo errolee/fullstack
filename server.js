@@ -114,7 +114,22 @@ app.post('/order', async (req, res) => {
       };
 
       const result = await db1.collection('Orders').insertOne(order);
-      
+       // Update the available spaces in the Lessons collection
+    for (const lesson of lessons) {
+      const lessonObjectId = new ObjectId(lesson.lessonID); // Ensure the ID is a valid ObjectId
+      const decrementSpaces = lesson.spaces;
+
+      const updateResult = await db1.collection('Lessons').updateOne(
+        { _id: lessonObjectId },                // Find the lesson by its ID
+        { $inc: { spaces: -decrementSpaces } }  // Decrement the spaces
+      );
+
+      if (updateResult.matchedCount === 0) {
+        console.error(`Lesson with ID ${lesson.lessonID} not found`);
+      } else {
+        console.log(`Spaces updated for lesson ${lesson.lessonID}`);
+      }
+    }
       
 
       res.json({ insertedId: result.insertedId });
