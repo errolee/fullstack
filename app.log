@@ -1515,3 +1515,15 @@
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T12:07:26.098Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T12:07:27.513Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T12:07:28.802Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-21T18:23:24.068Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-21T18:23:25.600Z"}
+{"level":"info","message":"GET /orders - 2024-11-21T18:23:55.210Z","timestamp":"2024-11-21T18:23:55.210Z"}
+{"level":"info","message":"Displaying data in the Orders Collection","timestamp":"2024-11-21T18:23:55.296Z"}
+{"level":"info","message":"POST /order - 2024-11-21T18:27:09.623Z","timestamp":"2024-11-21T18:27:09.624Z"}
+{"level":"info","message":"PUT /lessons/673b5857b07730bd14ea03e8 - 2024-11-21T18:31:09.441Z","timestamp":"2024-11-21T18:31:09.442Z"}
+{"level":"info","message":"Updated the lesson successfully","timestamp":"2024-11-21T18:31:09.520Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-22T06:04:12.217Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-22T06:04:13.550Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-22T06:04:14.255Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-11-22T06:07:15.442Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-11-22T06:07:17.024Z"}
