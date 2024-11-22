@@ -103,7 +103,7 @@ app.post('/order', async (req, res) => {
 
       const lessons = orderData.lessons.map(lesson => ({
           lessonID: lesson.lessonID,
-          availability: lesson.availability
+          spaces: lesson.spaces
       }));
 
       const order = {
