@@ -114,21 +114,7 @@ app.post('/order', async (req, res) => {
       };
 
       const result = await db1.collection('Orders').insertOne(order);
-      // After inserting the order, update the Lessons collection to decrement the available spaces
-      for (let lesson of orderData.lessons) {
-        const lessonObjectId = new ObjectId(lesson.lessonID); // Convert lessonID to ObjectId
-        const spacesToDeduct = lesson.spaces; // Number of spaces booked
-
-        // Update the lesson's availability
-        const updateResult = await db1.collection('Lessons').updateOne(
-            { _id: lessonObjectId },  // Find lesson by ObjectId
-            { $inc: { spaces: -spacesToDeduct } } // Decrement spaces
-        );
-
-        if (updateResult.modifiedCount === 0) {
-            console.error(`Failed to update lesson with ID ${lesson.lessonID}`);
-        }
-    }
+      
 
       res.json({ insertedId: result.insertedId });
   } catch (error) {
