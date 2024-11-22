@@ -66,10 +66,10 @@ app.param("collectionName", (req, res, next, collectionName) => {
 });
 
 // Static file serving
-const imagePath = path.resolve(process.cwd(), 'images');
-app.use('/images', express.static(imagePath, { fallthrough: true }));
-app.use('/images', (req, res) => {
-  res.status(404).json({ error: 'Image not found' });
+const imagePath = path.resolve(process.cwd(), 'images');// Define where the images are stored (in the 'images' folder).
+app.use('/images', express.static(imagePath, { fallthrough: true }));// Tell Express to serve files from the 'images' folder when the URL starts with '/images'.
+app.use('/images', (req, res) => { // Tell Express to serve files from the 'images' folder when the URL starts with '/images'.
+  res.status(404).json({ error: 'Image not found' });// If the requested image is not found, show a 404 error with a message.
 });
 
 // Route to fetch lessons
